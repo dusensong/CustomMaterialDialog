@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<cn.reflect.dialogs.util.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SDL.ListItem">
+
+    <CheckBox style="@style/SDL.ListItemControl"
+        android:button="@null"
+        android:background="@drawable/sdl_ic_multi_choice"/>
+
+    <TextView
+        android:id="@+id/sdl_text"
+        style="@style/SDL.TextView.MultiChoice"
+        tools:text="Item" />
+
+</cn.reflect.dialogs.util.CheckableLinearLayout>
