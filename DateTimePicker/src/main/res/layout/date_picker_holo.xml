@@ -43,7 +43,7 @@
 
         <com.lany.picker.NumberPicker
             android:id="@+id/year"
-            android:layout_width="wrap_content"
+            android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"

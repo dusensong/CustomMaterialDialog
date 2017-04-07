@@ -8,20 +8,27 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import cn.reflect.dialogs.fragment.DatePickerDialogFragment;
+import cn.reflect.dialogs.fragment.DateTimePickerDialogFragment;
 import cn.reflect.dialogs.fragment.ListDialogFragment;
 import cn.reflect.dialogs.fragment.ProgressDialogFragment;
 import cn.reflect.dialogs.fragment.SimpleDialogFragment;
-import cn.reflect.dialogs.iface.IDateDialogListener;
+import cn.reflect.dialogs.fragment.TimePickerDialogFragment;
+import cn.reflect.dialogs.iface.IDatePickerDialogListener;
+import cn.reflect.dialogs.iface.IDateTimePickerDialogListener;
 import cn.reflect.dialogs.iface.IListDialogListener;
 import cn.reflect.dialogs.iface.IMultiChoiceListDialogListener;
 import cn.reflect.dialogs.iface.ISimpleDialogCancelListener;
 import cn.reflect.dialogs.iface.ISimpleDialogListener;
+import cn.reflect.dialogs.iface.ITimePickerDialogListener;
 
 public class MainActivity extends ActionBarActivity implements
         ISimpleDialogListener,
-        IDateDialogListener,
+        IDatePickerDialogListener,
+        ITimePickerDialogListener,
+        IDateTimePickerDialogListener,
         ISimpleDialogCancelListener,
         IListDialogListener,
         IMultiChoiceListDialogListener {
@@ -32,6 +39,7 @@ public class MainActivity extends ActionBarActivity implements
     private static final int REQUEST_LIST_SINGLE = 11;
     private static final int REQUEST_DATE_PICKER = 12;
     private static final int REQUEST_TIME_PICKER = 13;
+    private static final int REQUEST_DATE_TIME_PICKER = 14;
     private static final int REQUEST_SIMPLE_DIALOG = 42;
 
     MainActivity c = this;
@@ -145,36 +153,45 @@ public class MainActivity extends ActionBarActivity implements
                         .show();
             }
         });
-//        findViewById(R.id.custom_dialog).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                JayneHatDialogFragment.show(c);
-//            }
-//        });
-//        findViewById(R.id.time_picker).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                TimePickerDialogFragment
-//                        .createBuilder(DemoActivity.this, getSupportFragmentManager())
-//                        .setDate(new Date())
-//                        .setPositiveButtonText(android.R.string.ok)
-//                        .setNegativeButtonText(android.R.string.cancel)
-//                        .setRequestCode(REQUEST_TIME_PICKER)
-//                        .show();
-//            }
-//        });
+        findViewById(R.id.time_picker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialogFragment
+                        .createBuilder(MainActivity.this, getSupportFragmentManager())
+                        .setTitle("选择时间")
+                        .setPositiveButtonText(android.R.string.ok)
+                        .setNegativeButtonText(android.R.string.cancel)
+                        .setRequestCode(REQUEST_TIME_PICKER)
+                        .show();
+            }
+        });
         findViewById(R.id.date_picker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(2000, 6, 6);
+//                Calendar calendar = Calendar.getInstance();
+//                calendar.set(2000, 6, 6);
                 DatePickerDialogFragment
                         .createBuilder(MainActivity.this, getSupportFragmentManager())
-                        .setTitle("选择时间")
-                        .setDate(calendar.getTime())
+                        .setTitle("选择日期")
+//                        .setDate(calendar.getTime())
                         .setPositiveButtonText(android.R.string.ok)
                         .setNegativeButtonText(android.R.string.cancel)
                         .setRequestCode(REQUEST_DATE_PICKER)
+                        .show();
+            }
+        });
+        findViewById(R.id.date_time_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Calendar calendar = Calendar.getInstance();
+//                calendar.set(2000, 6, 6);
+                DateTimePickerDialogFragment
+                        .createBuilder(MainActivity.this, getSupportFragmentManager())
+                        .setTitle("选择时间")
+//                        .setDate(calendar.getTime())
+                        .setPositiveButtonText(android.R.string.ok)
+                        .setNegativeButtonText(android.R.string.cancel)
+                        .setRequestCode(REQUEST_DATE_TIME_PICKER)
                         .show();
             }
         });
@@ -256,19 +273,24 @@ public class MainActivity extends ActionBarActivity implements
         }
     }
 
-    // IDateDialogListener
+    // IDatePickerDialogListener
     @Override
     public void onPositiveButtonClicked(int resultCode, int year, int monthOfYear, int dayOfMonth) {
-        String text = "";
-        if (resultCode == REQUEST_DATE_PICKER) {
-            text = "Date ";
-        } else if (resultCode == REQUEST_TIME_PICKER) {
-            text = "Time ";
-        }
-
         Calendar cl = Calendar.getInstance();
         cl.clear();
         cl.set(year, monthOfYear, dayOfMonth);
-        Toast.makeText(this, text + "Success! " + new SimpleDateFormat("yyyy-MM-dd").format(cl.getTime()), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Success! " + new SimpleDateFormat("yyyy-MM-dd").format(cl.getTime()), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPositiveButtonClicked(int requestCode, int hour, int minute) {
+        Toast.makeText(this, "Success! " + hour + ":" + minute, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPositiveButtonClicked(int requestCode, Date date) {
+        Calendar cl = Calendar.getInstance();
+        cl.setTime(date);
+        Toast.makeText(this, "Success! " + new SimpleDateFormat("yyyy-MM-dd HH").format(cl.getTime()), Toast.LENGTH_SHORT).show();
     }
 }

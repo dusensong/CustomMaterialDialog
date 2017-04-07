@@ -15,14 +15,12 @@ import java.util.List;
 import cn.reflect.dialogs.R;
 import cn.reflect.dialogs.core.BaseDialogBuilder;
 import cn.reflect.dialogs.core.BaseDialogFragment;
-import cn.reflect.dialogs.iface.IDateDialogListener;
-import cn.reflect.dialogs.iface.ISimpleDialogCancelListener;
+import cn.reflect.dialogs.iface.IDatePickerDialogListener;
 
 /**
  * Dialog with a date picker.
  * <p/>
- * Implement {@link IDateDialogListener}
- * and/or {@link ISimpleDialogCancelListener} to handle events.
+ * Implement {@link IDatePickerDialogListener} to handle events.
  */
 public class DatePickerDialogFragment extends BaseDialogFragment {
 
@@ -31,22 +29,15 @@ public class DatePickerDialogFragment extends BaseDialogFragment {
     protected static final String ARG_NEGATIVE_BUTTON = "negative_button";
     protected static final String ARG_DATE = "date";
 
-    DatePicker mDatePicker;
-    Calendar mCalendar;
+    private DatePicker mDatePicker;
+    private Calendar mCalendar;
 
     public static SimpleDialogBuilder createBuilder(Context context, FragmentManager fragmentManager) {
         return new SimpleDialogBuilder(context, fragmentManager, DatePickerDialogFragment.class);
     }
 
-    /**
-     * Get dialog date listeners.
-     * There might be more than one date listener.
-     *
-     * @return Dialog date listeners
-     * @since 2.1.0
-     */
-    protected List<IDateDialogListener> getDialogListeners() {
-        return getDialogListeners(IDateDialogListener.class);
+    private List<IDatePickerDialogListener> getDatePickerDialogListeners() {
+        return getDialogListeners(IDatePickerDialogListener.class);
     }
 
     @Override
@@ -62,7 +53,7 @@ public class DatePickerDialogFragment extends BaseDialogFragment {
 
                 @Override
                 public void onClick(View view) {
-                    for (IDateDialogListener listener : getDialogListeners()) {
+                    for (IDatePickerDialogListener listener : getDatePickerDialogListeners()) {
                         listener.onPositiveButtonClicked(mRequestCode,
                                 mDatePicker.getYear(), mDatePicker.getMonth(), mDatePicker.getDayOfMonth());
                     }
@@ -77,7 +68,7 @@ public class DatePickerDialogFragment extends BaseDialogFragment {
 
                 @Override
                 public void onClick(View view) {
-                    for (IDateDialogListener listener : getDialogListeners()) {
+                    for (IDatePickerDialogListener listener : getDatePickerDialogListeners()) {
                         listener.onNegativeButtonClicked(mRequestCode);
                     }
                     dismiss();

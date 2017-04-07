@@ -61,9 +61,9 @@
             android:text="Date picker dialog" />
 
         <Button
-            android:id="@+id/custom_dialog"
+            android:id="@+id/date_time_dialog"
             style="@style/Button"
             android:layout_marginBottom="@dimen/grid_3"
-            android:text="Custom dialog" />
+            android:text="YMDH Picker dialog" />
     </LinearLayout>
 </ScrollView>

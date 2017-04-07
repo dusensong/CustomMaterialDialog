@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<TimePicker xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/sdl_datepicker"
+<com.lany.picker.HMPicker xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sdl_timepicker"
     style="@style/SDL.DatePicker" />

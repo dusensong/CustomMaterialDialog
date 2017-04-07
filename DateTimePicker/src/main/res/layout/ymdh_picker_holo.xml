@@ -11,7 +11,7 @@
 
     <com.lany.picker.NumberPicker
         android:id="@+id/year"
-        android:layout_width="wrap_content"
+        android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:focusable="true"
@@ -21,7 +21,7 @@
 
     <com.lany.picker.NumberPicker
         android:id="@+id/month"
-        android:layout_width="wrap_content"
+        android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:focusable="true"
@@ -32,7 +32,7 @@
 
     <com.lany.picker.NumberPicker
         android:id="@+id/day"
-        android:layout_width="wrap_content"
+        android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:focusable="true"
@@ -43,7 +43,7 @@
 
     <com.lany.picker.NumberPicker
         android:id="@+id/hour"
-        android:layout_width="wrap_content"
+        android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:focusable="true"

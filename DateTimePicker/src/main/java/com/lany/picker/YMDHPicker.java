@@ -51,6 +51,7 @@ public class YMDHPicker extends FrameLayout {
     private OnDateChangedListener mOnDateChangedListener;
 
     private String[] mShortMonths;
+//    private String[] mShortDays;
 
     private final java.text.DateFormat mDateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
 
