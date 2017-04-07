@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<DatePicker xmlns:android="http://schemas.android.com/apk/res/android"
+<com.lany.picker.DatePicker xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sdl_datepicker"
+    app:dp_calendarViewShown="false"
+    app:dp_spinnersShown="true"
     style="@style/SDL.DatePicker" />

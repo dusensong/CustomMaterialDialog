@@ -6,9 +6,10 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
+import cn.reflect.dialogs.fragment.DatePickerDialogFragment;
 import cn.reflect.dialogs.fragment.ListDialogFragment;
 import cn.reflect.dialogs.fragment.ProgressDialogFragment;
 import cn.reflect.dialogs.fragment.SimpleDialogFragment;
@@ -56,13 +57,14 @@ public class MainActivity extends ActionBarActivity implements
             @Override
             public void onClick(View v) {
                 SimpleDialogFragment.createBuilder(c, getSupportFragmentManager())
-                        .setTitle("升级提示").setMessage
-                        ("这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
-                                "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
-                                "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
-                                "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
-                                "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
-                                "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框")
+                        .setTitle("升级提示")
+                        .setMessage
+                                ("这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
+                                        "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
+                                        "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
+                                        "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
+                                        "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框\n\n" +
+                                        "这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框，这是一个文本对话框")
                         .setNegativeButtonText("关闭")
                         .show();
             }
@@ -161,18 +163,21 @@ public class MainActivity extends ActionBarActivity implements
 //                        .show();
 //            }
 //        });
-//        findViewById(R.id.date_picker).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                DatePickerDialogFragment
-//                        .createBuilder(DemoActivity.this, getSupportFragmentManager())
-//                        .setDate(new Date())
-//                        .setPositiveButtonText(android.R.string.ok)
-//                        .setNegativeButtonText(android.R.string.cancel)
-//                        .setRequestCode(REQUEST_DATE_PICKER)
-//                        .show();
-//            }
-//        });
+        findViewById(R.id.date_picker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(2000, 6, 6);
+                DatePickerDialogFragment
+                        .createBuilder(MainActivity.this, getSupportFragmentManager())
+                        .setTitle("选择时间")
+                        .setDate(calendar.getTime())
+                        .setPositiveButtonText(android.R.string.ok)
+                        .setNegativeButtonText(android.R.string.cancel)
+                        .setRequestCode(REQUEST_DATE_PICKER)
+                        .show();
+            }
+        });
     }
 
     // IListDialogListener
@@ -237,6 +242,10 @@ public class MainActivity extends ActionBarActivity implements
     public void onNegativeButtonClicked(int requestCode) {
         if (requestCode == REQUEST_SIMPLE_DIALOG) {
             Toast.makeText(c, "Negative button clicked", Toast.LENGTH_SHORT).show();
+        } else if (requestCode == REQUEST_DATE_PICKER) {
+            Toast.makeText(this, "Date Picker Dialog Cancelled", Toast.LENGTH_SHORT).show();
+        } else if (requestCode == REQUEST_TIME_PICKER) {
+            Toast.makeText(this, "Time Picker Dialog Cancelled", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -248,9 +257,8 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     // IDateDialogListener
-
     @Override
-    public void onNegativeButtonClicked(int resultCode, Date date) {
+    public void onPositiveButtonClicked(int resultCode, int year, int monthOfYear, int dayOfMonth) {
         String text = "";
         if (resultCode == REQUEST_DATE_PICKER) {
             text = "Date ";
@@ -258,20 +266,9 @@ public class MainActivity extends ActionBarActivity implements
             text = "Time ";
         }
 
-        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.DEFAULT);
-        Toast.makeText(this, text + "Cancelled " + dateFormat.format(date), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onPositiveButtonClicked(int resultCode, Date date) {
-        String text = "";
-        if (resultCode == REQUEST_DATE_PICKER) {
-            text = "Date ";
-        } else if (resultCode == REQUEST_TIME_PICKER) {
-            text = "Time ";
-        }
-
-        DateFormat dateFormat = DateFormat.getDateTimeInstance();
-        Toast.makeText(this, text + "Success! " + dateFormat.format(date), Toast.LENGTH_SHORT).show();
+        Calendar cl = Calendar.getInstance();
+        cl.clear();
+        cl.set(year, monthOfYear, dayOfMonth);
+        Toast.makeText(this, text + "Success! " + new SimpleDateFormat("yyyy-MM-dd").format(cl.getTime()), Toast.LENGTH_SHORT).show();
     }
 }

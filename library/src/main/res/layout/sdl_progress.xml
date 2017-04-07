@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/SDL.Layout.Progress">
 
-    <ProgressBar
-        android:id="@+id/sdl_progress"
-        style="@style/SDL.Progress" />
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:layout_width="wrap_content"
+        style="@style/SDL.Progress"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:indeterminate="true"
+        app:mpb_indeterminateTint="@color/sdl_color_accent" />
 
     <TextView
         android:id="@+id/sdl_message"

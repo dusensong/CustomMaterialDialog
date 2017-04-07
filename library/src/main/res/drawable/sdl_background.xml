@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetBottom="26dp"
+    android:insetBottom="80dp"
     android:insetLeft="16dp"
     android:insetRight="16dp"
-    android:insetTop="26dp">
+    android:insetTop="80dp">
     <shape android:shape="rectangle">
         <corners android:radius="2dp" />
         <solid android:color="@color/sdl_background_light" />

@@ -25,6 +25,9 @@
         <item name="sdlDividerColor">@color/sdl_divider_light</item>
         <item name="sdlPressedColor">@color/sdl_pressed_light</item>
         <item name="android:windowBackground">@drawable/sdl_background</item>
+        <item name="calendarViewStyle">@style/Widget.Holo.Light.CalendarView</item>
+        <item name="datePickerStyle">@style/Widget.Holo.Light.DatePicker</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
     </style>
 
     <style name="SDL.Layout">
@@ -194,7 +197,7 @@
         <item name="android:layout_height">@dimen/grid_2</item>
     </style>
 
-    <style name="SDL.Progress" parent="Widget.AppCompat.ProgressBar">
+    <style name="SDL.Progress" parent="@style/Widget.MaterialProgressBar.ProgressBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">@dimen/grid_1</item>
@@ -207,8 +210,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:spinnersShown" tools:ignore="NewApi">true</item>
-        <item name="android:calendarViewShown" tools:ignore="NewApi">false</item>
     </style>
 
     <style name="SDL.ListView">

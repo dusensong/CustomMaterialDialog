@@ -16,16 +16,13 @@
 
 package cn.reflect.dialogs.iface;
 
-import java.util.Date;
-
 /**
  * Implement this interface in Activity or Fragment to react to positive and negative buttons of date/time dialog.
  *
  * @author David Vávra (david@inmite.eu)
  */
-public interface IDateDialogListener {
+public interface IDateDialogListener extends INegativeButtonDialogListener{
 
-    public void onPositiveButtonClicked(int requestCode, Date date);
-
-    public void onNegativeButtonClicked(int requestCode, Date date);
+    public void onPositiveButtonClicked(int requestCode, int year,
+                                        int monthOfYear, int dayOfMonth);
 }
