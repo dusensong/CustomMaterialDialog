@@ -69,7 +69,7 @@ public class DateTimePickerDialogFragment extends DatePickerDialogFragment {
             });
         }
 
-        mYMDHPicker = (YMDHPicker) builder.getLayoutInflater().inflate(R.layout.sdl_ymdhpicker, null);
+        mYMDHPicker = (YMDHPicker) builder.getLayoutInflater().inflate(R.layout.sdl_ymdh_picker, null);
         builder.setView(mYMDHPicker);
 
         mCalendar = Calendar.getInstance();

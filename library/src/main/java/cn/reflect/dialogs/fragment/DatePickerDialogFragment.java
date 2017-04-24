@@ -75,7 +75,7 @@ public class DatePickerDialogFragment extends BaseDialogFragment {
                 }
             });
         }
-        mDatePicker = (DatePicker) builder.getLayoutInflater().inflate(R.layout.sdl_datepicker, null);
+        mDatePicker = (DatePicker) builder.getLayoutInflater().inflate(R.layout.sdl_date_picker, null);
         builder.setView(mDatePicker);
 
         mCalendar = Calendar.getInstance();

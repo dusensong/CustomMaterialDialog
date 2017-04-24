@@ -3,183 +3,48 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\0169bd9cb727f99d83875f677c4501ed36e6b9e1\output\jars\classes.jar"
+        jar="C:\Users\dss\.android\build-cache\a65858d379ee3468bbe8530f1c0b8a1ac196d541\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.1"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_aef2e1fbd15f4b817429d5874cc1a1011c13ea02.jar" />
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_7a99f209b0844d291106630f39c2e16b5232e16f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\49418e684770a715bd28b82082abb2d6314bdf19\output\jars\classes.jar"
+        jar="C:\Users\dss\.android\build-cache\5367e58ad1f0f9deb5aea15f999f32b78cbc03b1\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.1"
-        sha1="e3d9c700f8a34ce3b2a18c18d369d13417d31981">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_d854f5487751c4683b8a3d496ad1b998782ec11c.jar" />
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_5e88d6f1e9a15063d8e13d248145c3c674408721.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\0169bd9cb727f99d83875f677c4501ed36e6b9e1\output\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\dss\.android\build-cache\60478d538c9436ba92f51e25201d97d0e9dbce37\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_2a976a1d34b4b18776c3dceafe50c118f6bb876f.jar" />
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_f1e2916160e76ada129a56ef40853ac888096c6c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\93099aebf778685ebf3890323726e337136b20f0\output\jars\classes.jar"
+        jar="C:\Dss\WorkSpace\CustomMaterialDialog\DateTimePicker\build\intermediates\bundles\default\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.1"
-        sha1="a846ddbf5bf88dee5f89d4dffe22c864f576d9b0">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_22e3517dffbe78c72eb59387bdc5d24f682acb83.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\e6bd90c70d5a333bb7529aceadf3b912497c5c92\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_89b65bbe0bc6b642a17eb82a9fb10094f6a938c1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Dss\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_7699a183aeaa9489eff60ca67973be63e7af8291.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\8bbfad903d3f79d460f5e7a4f4c3a0b726659647\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_1ca5bf42e65ab64a501ef169b190fd75cc599952.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\59b6966e1f0344e32d51e97fd587d30cbe1a7b70\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_10fac54a9f506e8a6232914ba7f28882cefb8b57.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\a36a34d425e76fa660c7d601950e096a35de01e2\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_92e0b4af09d6c2d217101777dc85db9f61f099c8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\e5048251af83b0e0b44922f53a2ba4982d01a9f5\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_cdd9939a2df8074e7dcef50fdf07e136d95b0cca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\56cc222897f22c62033b5b8d8379c0b630323b65\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_225180e40d12d9ecd4049e936bc25137ce64ee73.jar" />
+        revision="25.0.2"
+        sha1="66f0b28fe9914f6bcc946932190db6e5ec872548">
+        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_51d8423d9946b2a4fe2865c0c5ef4b2b05f8e97b.jar" />
     </item>
     <item
         is-multidex="false"
         jar="C:\Dss\WorkSpace\CustomMaterialDialog\library\build\intermediates\bundles\default\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.1"
-        sha1="a23a87434dc4e20148092349d78791bae4fe0e70">
+        revision="25.0.2"
+        sha1="9161117f8bd2137d1d4133c1041457aa43114c10">
         <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_9713aa416f0f6491908e94df5ad2d282fd49a084.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\8b8a9ec74b0f0f754c434db1e29387ddabf696ef\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_cbfc3278b91581e7a784bda662dbd2ca58dcc5a4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\e5048251af83b0e0b44922f53a2ba4982d01a9f5\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_3c1cee4d09242b38739922ca0dbf20e064226cac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\a36a34d425e76fa660c7d601950e096a35de01e2\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_dea103f943811d217a5a29f0a7875d8af978d386.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\8bbfad903d3f79d460f5e7a4f4c3a0b726659647\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_3d94762c37a20096b34018b51807d5a5021392eb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\e6bd90c70d5a333bb7529aceadf3b912497c5c92\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_7d49b6aae3ab71a3919003c426a9fe60a027cf1b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\f51b4b83dba8c14c1620e2efcf1080530ab684a1\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_4cfa21fdaab355d49d75b919505d267b221d427e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\bd4bef2746110528d5b79f72cb791081bd634831\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_035c10fee24c77107943355c5788413b4ba3ab29.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dss\.android\build-cache\99843da81995e407cd6f403cc2cf9d02c21c07da\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Dss\WorkSpace\CustomMaterialDialog\app\build\intermediates\pre-dexed\debug\classes_d5c080cecbe050283c368bc2d0088ffa170fdf91.jar" />
     </item>
 
 </items>

@@ -15,6 +15,7 @@ import cn.reflect.dialogs.fragment.DateTimePickerDialogFragment;
 import cn.reflect.dialogs.fragment.ListDialogFragment;
 import cn.reflect.dialogs.fragment.ProgressDialogFragment;
 import cn.reflect.dialogs.fragment.SimpleDialogFragment;
+import cn.reflect.dialogs.fragment.StartEndTimePickerDialogFragment;
 import cn.reflect.dialogs.fragment.TimePickerDialogFragment;
 import cn.reflect.dialogs.iface.IDatePickerDialogListener;
 import cn.reflect.dialogs.iface.IDateTimePickerDialogListener;
@@ -22,6 +23,7 @@ import cn.reflect.dialogs.iface.IListDialogListener;
 import cn.reflect.dialogs.iface.IMultiChoiceListDialogListener;
 import cn.reflect.dialogs.iface.ISimpleDialogCancelListener;
 import cn.reflect.dialogs.iface.ISimpleDialogListener;
+import cn.reflect.dialogs.iface.IStartEndTimePickerDialogListener;
 import cn.reflect.dialogs.iface.ITimePickerDialogListener;
 
 public class MainActivity extends ActionBarActivity implements
@@ -29,6 +31,7 @@ public class MainActivity extends ActionBarActivity implements
         IDatePickerDialogListener,
         ITimePickerDialogListener,
         IDateTimePickerDialogListener,
+        IStartEndTimePickerDialogListener,
         ISimpleDialogCancelListener,
         IListDialogListener,
         IMultiChoiceListDialogListener {
@@ -40,6 +43,7 @@ public class MainActivity extends ActionBarActivity implements
     private static final int REQUEST_DATE_PICKER = 12;
     private static final int REQUEST_TIME_PICKER = 13;
     private static final int REQUEST_DATE_TIME_PICKER = 14;
+    private static final int REQUEST_START_END_TIME_PICKER = 15;
     private static final int REQUEST_SIMPLE_DIALOG = 42;
 
     MainActivity c = this;
@@ -140,7 +144,6 @@ public class MainActivity extends ActionBarActivity implements
                         .setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE)
                         .setCheckedItems(new int[]{1, 3})
                         .show();
-
             }
         });
 
@@ -180,7 +183,7 @@ public class MainActivity extends ActionBarActivity implements
                         .show();
             }
         });
-        findViewById(R.id.date_time_dialog).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.date_time_picker_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Calendar calendar = Calendar.getInstance();
@@ -192,6 +195,19 @@ public class MainActivity extends ActionBarActivity implements
                         .setPositiveButtonText(android.R.string.ok)
                         .setNegativeButtonText(android.R.string.cancel)
                         .setRequestCode(REQUEST_DATE_TIME_PICKER)
+                        .show();
+            }
+        });
+
+        findViewById(R.id.start_end_time_picker_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StartEndTimePickerDialogFragment
+                        .createBuilder(MainActivity.this, getSupportFragmentManager())
+                        .setTitle("选择开始结束时间")
+                        .setPositiveButtonText(android.R.string.ok)
+                        .setNegativeButtonText(android.R.string.cancel)
+                        .setRequestCode(REQUEST_START_END_TIME_PICKER)
                         .show();
             }
         });
@@ -292,5 +308,11 @@ public class MainActivity extends ActionBarActivity implements
         Calendar cl = Calendar.getInstance();
         cl.setTime(date);
         Toast.makeText(this, "Success! " + new SimpleDateFormat("yyyy-MM-dd HH").format(cl.getTime()), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPositiveButtonClicked(int requestCode,
+                                        int startHour, int startMinute, int endHour, int endMinute) {
+        Toast.makeText(this, "Success! " + startHour + ":" + startMinute + "-" + endHour + ":" + endMinute, Toast.LENGTH_SHORT).show();
     }
 }

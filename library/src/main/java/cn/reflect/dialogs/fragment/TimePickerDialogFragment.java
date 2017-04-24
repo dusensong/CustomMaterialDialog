@@ -68,7 +68,7 @@ public class TimePickerDialogFragment extends DatePickerDialogFragment {
             });
         }
 
-        mHMPicker = (HMPicker) builder.getLayoutInflater().inflate(R.layout.sdl_timepicker, null);
+        mHMPicker = (HMPicker) builder.getLayoutInflater().inflate(R.layout.sdl_time_picker, null);
         builder.setView(mHMPicker);
 
         mHMPicker.setIs24HourView(true);
